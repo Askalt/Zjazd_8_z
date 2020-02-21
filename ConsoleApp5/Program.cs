@@ -8,13 +8,14 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
            
-            var drukarka = new Printer(88);
+            var printer = new Printer(20);
 
-            drukarka.Out_of_paper += Out_of_Paper2;
-            drukarka.Out_of_ink += Out_of_Ink;
-            for (int i = 1; i < 10; i++)
+
+            printer.Out_of_paper += Out_of_Paper2;
+            printer.Out_of_ink += Out_of_Ink;
+            for (int i = 1; i < 6; i++)
             {
-                drukarka.Print(i);
+                printer.Print(i);
                 if (!printOK)
                 {
                     return;

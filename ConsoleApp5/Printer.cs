@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+
+
 
 namespace ConsoleApp5
 {
@@ -15,10 +18,11 @@ namespace ConsoleApp5
         {
             Out_of_paper += Out_of_Paper2;
             Out_of_ink +=Out_of_Ink;
-            inks_levels = new List<Ink>
-            {
-                new Ink("Czarny",1),
-                new Ink("Kolor",1)
+            inks_levels = new List<Ink>{
+                new Ink("Black",1),
+                new Ink("Green",1),
+                new Ink("Blue",1),
+                new Ink("Red",1)
             };
         }
 
@@ -26,6 +30,8 @@ namespace ConsoleApp5
         {
             this.paper_count = paper_count;
         }
+
+
         public void print(int page_number)
         {
             Out_of_paper.Invoke(this, new OutofpaperEventArgs(page_number));
