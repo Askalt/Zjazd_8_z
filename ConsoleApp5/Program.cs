@@ -13,7 +13,7 @@ namespace ConsoleApp5
 
             printer.Out_of_paper += Out_of_Paper2;
             printer.Out_of_ink += Out_of_Ink;
-            for (int i = 1; i < 6; i++)
+            for (int i = 1; i < 30; i++)
             {
                 printer.Print(i);
                 if (!printOK)
@@ -26,13 +26,13 @@ namespace ConsoleApp5
         static void Out_of_Paper2(object sender, EventArgs args)
         {
 
-            Console.WriteLine("Brak papieru !!!");
+            Console.WriteLine("Paper - low");
             printOK = false;
 
         }
         static void Out_of_Ink(object sender, OutOfInkEventArgs args)
         {
-            Console.WriteLine("Brak Tuszu " + args.Color);
+            Console.WriteLine("Ink - low  " + args.Color);
             printOK = false;
         }
 

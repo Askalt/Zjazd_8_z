@@ -8,14 +8,14 @@ namespace ConsoleApp5
     {
         public Ink(string color, double level)
         {
-            Color = color;
-            Level = level;
+            this.color = color;
+            this.level = level;
         }
 
-        public string Color;
-        public double Level;
+        public string color { get; set; }
+        public double level { get; set; }
 
 
-     
+
     }
 }

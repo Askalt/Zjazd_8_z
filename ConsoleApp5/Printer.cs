@@ -51,9 +51,9 @@ namespace ConsoleApp5
             {
                 foreach (var ink in inks_levels)
                 {
-                    if (ink.Level <= 0)
+                    if (ink.level <= 0)
                     {
-                        Out_of_ink.Invoke(this, new OutOfInkEventArgs(ink.Color));
+                        Out_of_ink.Invoke(this, new OutOfInkEventArgs(ink.color));
                         return;
                     }
                 }
@@ -62,18 +62,18 @@ namespace ConsoleApp5
 
                 foreach (var ink in inks_levels)
                 {
-                    ink.Level -= 0.2;
+                    ink.level -= 0.2;
                 }
             }
         }
         private void Out_of_Ink(object sender, OutOfInkEventArgs args)
         {
-            Console.WriteLine("Brak Tuszu " + args.Color);
+            Console.WriteLine("Ink-low " + args.Color);
 
         }
         private void Out_of_Paper2(object sender, EventArgs args)
         {
-            Console.WriteLine("Brak papieru !!!");
+            Console.WriteLine("Paper-low");
 
         }
 
